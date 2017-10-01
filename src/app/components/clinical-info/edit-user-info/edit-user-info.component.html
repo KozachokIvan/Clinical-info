@@ -1,0 +1,23 @@
+<md-toolbar class="table-head"><span class="ml1">Edit patient:</span></md-toolbar>
+<form class="diagnose-form" name="form" ng-submit="$ctrl.saveUserInfo(form)">
+    <div flex="33">
+        <md-input-container>
+            <label>Patient name:*</label>
+            <input type="text" name="name" ng-model="$ctrl.form.name" required>
+        </md-input-container>
+        <md-input-container>
+            <label>DOB:*</label>
+            <input type="text" name="dob" ng-model="$ctrl.form.dob" required>
+        </md-input-container>
+    </div>
+    <div layout="column" flex="100">
+        <md-input-container>
+            <label>Full address:</label>
+            <input type="text" name="address" ng-model="$ctrl.form.address">
+        </md-input-container>
+    </div>
+
+    <div class="save-button">
+        <md-button type="submit" class="md-primary md-raised md-mini">Save</md-button>
+    </div>
+</form>

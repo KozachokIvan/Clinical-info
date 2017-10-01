@@ -1,0 +1,19 @@
+<div class="ml1">
+    <div class="mb5 username-wrapp" ng-if="!$ctrl.info">
+        <span class="user-info-title">No information </span><md-icon ui-sref="home.info.edit-info">create</md-icon>
+    </div>
+    <div ng-if="$ctrl.info">
+        <div class="mb5 username-wrapp">
+            <span class="user-info-title" ng-bind="$ctrl.info.name"></span> <md-icon ui-sref="home.info.edit-info">create</md-icon>
+        </div>
+        <div class="mb5">
+            <span class="info-title">Birthday:</span>
+            <span class="info-description" ng-bind="$ctrl.info.dob"></span>
+        </div>
+        <div>
+            <span class="info-title">Full adress:</span>
+            <span class="info-description" ng-bind="$ctrl.info.address"></span>
+        </div>
+    </div>
+
+</div>

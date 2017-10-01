@@ -1,0 +1,25 @@
+<md-toolbar class="table-head"><span class="ml1">Current diagnoses:</span></md-toolbar>
+<md-table-container ng-if="$ctrl.currentDiagnoses.length">
+    <table md-table multiple class="table">
+        <thead md-head>
+            <tr md-row>
+                <th md-column md-numeric>Code</th>
+                <th md-column md-numeric>Diagnosis</th>
+                <th md-column md-numeric>Adition Date</th>
+                <th md-column md-numeric></th>
+            </tr>
+        </thead>
+        <tbody md-body>
+            <tr md-row ng-repeat="diagnose in $ctrl.currentDiagnoses track by $index">
+                <td md-cell ng-bind="diagnose.code"></td>
+                <td md-cell ng-bind="diagnose.diagnosis"></td>
+                <td md-cell ng-bind="diagnose.date | date:'dd/MM/yyyy'"></td>
+                <td md-cell>
+                    <md-icon class="edit" ng-click="$ctrl.editDiagnose(diagnose, $index)">create</md-icon>
+                    <md-icon class="remove" ng-click="$ctrl.removeDiagnose($index)">cancel</md-icon>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</md-table-container>
+<h2 class="ml1" ng-if="!$ctrl.currentDiagnoses.length">No diagnoses</h2>

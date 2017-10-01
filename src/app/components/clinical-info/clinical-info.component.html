@@ -1,0 +1,16 @@
+<md-icon class="material-icons add-diagnose" ui-sref="home.info.add-diagnose">add_circle</md-icon>
+<div layout="column" class="page-wrapp">
+    <div flex layout="row">
+        <md-sidenav flex="20" md-is-locked-open="true" class="md-whiteframe-z1 user-info">
+            <md-content>
+                <user-info info="$ctrl.userInformation"></user-info>
+            </md-content>
+        </md-sidenav>
+
+        <div layout="column" flex>
+            <breadcrumbs></breadcrumbs>
+            <div ui-view></div>
+        </div>
+    </div>
+</div>
+

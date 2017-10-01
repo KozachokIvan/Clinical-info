@@ -1,0 +1,17 @@
+<form name="form" class="diagnose-form" ng-submit="$ctrl.formSubmit()">
+    <div flex="33">
+        <md-input-container>
+            <label>Code:*</label>
+            <input type="text" ng-model="$ctrl.diagnose.code" minlength="6" integer-input required>
+        </md-input-container>
+    </div>
+    <div layout="column" flex="100">
+        <md-input-container>
+            <label>Diagnose:*</label>
+            <input type="text" ng-model="$ctrl.diagnose.diagnosis" required>
+        </md-input-container>
+    </div>
+    <div class="save-button">
+        <md-button type="submit" class="md-primary md-raised md-mini" ng-disabled="!form.$valid">Save</md-button>
+    </div>
+</form>
