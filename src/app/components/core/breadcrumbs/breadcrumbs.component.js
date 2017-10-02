@@ -1,7 +1,7 @@
 class BreadcrumbsController {
     constructor() {
 
-        this.username = this.username || "New"
+        // this.username = this.username || "New"
     }
 }
 
