@@ -14,7 +14,10 @@ class EditUserInfoController {
         this.userInfoService.setUserInfo(this.form);
 
         // sync operations because we doesn't have any promise
-        this.$scope.$parent.$parent.$broadcast('userInfoChanged');
+        // inform clinical-info component that user information has been changed
+        this.$scope.$emit('userInfoChanged');
+
+        // go to list page after information change
         this.$state.go('home.info.list');
     }
 }

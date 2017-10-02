@@ -1,7 +1,13 @@
 class ClinicalInfoController {
-    constructor() {
+    constructor($scope, userInfoService) {
         'ngInject';
 
+        this.$scope = $scope;
+
+        // update info when patient changed
+        this.$scope.$on('userInfoChanged', () => {
+            this.userInformation = userInfoService.getUserInfo();
+        });
     }
 }
 
